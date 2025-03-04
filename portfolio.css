@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    color: white;
+    background-color: #333;
+    padding: 10px 0; /* Add some padding to the header */
+}
+
+nav {
+    background-color: #444;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.carousel {
+    display: flex; /* Use flexbox to align images in a row */
+    justify-content: center; /* Center the images */
+    margin: 10px 0; /* Add some margin */
+}
+
+.carousel img {
+    width: 450px; /* Set a fixed width for the images */
+    height: 450px; /* Maintain aspect ratio */
+    margin: 0 5px; /* Add some space between images */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.description {
+    margin-top: 10px; /* Add some space above the description */
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Ensure the header has a minimum height */
+header {
+    min-height: 200px; /* Adjust this value as needed */
+}
+
+.carousel {
+    flex-wrap: nowrap; /* Prevent wrapping of images */
+}
+
+.carousel img {
+    max-height: 300px; /* Set a maximum height for the images */
+    object-fit: cover; /* Ensure images cover the area without distortion */ 
+    font-size: 100;
+}
