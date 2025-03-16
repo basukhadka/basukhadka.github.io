@@ -1,7 +1,10 @@
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
 }
 
 header {
@@ -9,8 +12,9 @@ header {
     text-align: center;
     color: white;
     background-color: #333;
-    padding: 10px 0; /* Add some padding to the header */
+    padding: 20px 0; 
 }
+
 
 nav {
     background-color: #444;
@@ -32,27 +36,71 @@ nav ul li a {
     text-decoration: none;
 }
 
-.carousel {
-    display: flex; /* Use flexbox to align images in a row */
-    justify-content: center; /* Center the images */
-    margin: 10px 0; /* Add some margin */
-}
-
-.carousel img {
-    width: 450px; /* Set a fixed width for the images */
-    height: 450px; /* Maintain aspect ratio */
-    margin: 0 5px; /* Add some space between images */
-    border-radius: 10px; /* Optional: Add rounded corners */
-}
-
-.description {
-    margin-top: 10px; /* Add some space above the description */
-}
 
 section {
     padding: 20px;
     margin: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+
+.carousel {
+    display: flex;
+    justify-content: center; 
+    margin: 10px 0; 
+    overflow: hidden; 
+}
+
+.carousel input {
+    display: none; 
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+}
+
+.carousel img {
+    max-height: 300px; 
+    object-fit: cover;
+    border-radius: 10px; 
+}
+
+
+.carousel-controls {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.control {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+
+#slide1:checked ~ .carousel-images {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .carousel-images {
+    transform: translateX(-100%);
+}
+
+#slide3:checked ~ .carousel-images {
+    transform: translateX(-200%);
+}
+
 
 footer {
     text-align: center;
@@ -64,17 +112,3 @@ footer {
     width: 100%;
 }
 
-/* Ensure the header has a minimum height */
-header {
-    min-height: 200px; /* Adjust this value as needed */
-}
-
-.carousel {
-    flex-wrap: nowrap; /* Prevent wrapping of images */
-}
-
-.carousel img {
-    max-height: 300px; /* Set a maximum height for the images */
-    object-fit: cover; /* Ensure images cover the area without distortion */ 
-    font-size: 100;
-}
